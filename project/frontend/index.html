@@ -8,13 +8,28 @@
 
 <h1>Graph Traversal Visualizer</h1>
 
-<button onclick="runAlgo('bfs')">Run BFS</button>
-<button onclick="runAlgo('dfs')">Run DFS</button>
-<button onclick="resetGraph()">Reset</button>
+<div class="controls">
+    <button class="bfs-btn" onclick="runAlgo('bfs')">Run BFS</button>
+    <button class="dfs-btn" onclick="runAlgo('dfs')">Run DFS</button>
+    <button class="reset-btn" onclick="resetGraph()">Reset</button>
+</div>
+
+<!-- LEGEND -->
+<div id="legend">
+    <span class="legend-item">
+        <span class="color-box bfs"></span> BFS (Orange)
+    </span>
+    <span class="legend-item">
+        <span class="color-box dfs"></span> DFS (Green)
+    </span>
+    <span class="legend-item">
+        <span class="color-box both"></span> Both (Purple)
+    </span>
+</div>
 
 <canvas id="canvas" width="800" height="500"></canvas>
 
-<p>Click empty → create node | Click 2 nodes → connect</p>
+<p>Click empty → create node | Click two nodes → connect</p>
 
 <script src="script.js"></script>
 </body>
